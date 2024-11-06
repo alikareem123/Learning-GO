@@ -25,13 +25,13 @@ func main() {
 		fmt.Print("Enter what you want to do: ")
 		scanner.Scan()
 		input := scanner.Text()
-		
+
 		switch input {
 		case "1":
 			fmt.Print("Enter item(s) to add (comma delimited): ")
 			scanner.Scan()
 			itemsToAdd := strings.Split(scanner.Text(), ",")
-			
+
 			for _, item := range itemsToAdd {
 				item = strings.TrimSpace(item)
 				if item != "" && !contains(groceryList, item) {
@@ -47,7 +47,7 @@ func main() {
 			fmt.Print("Enter item(s) to remove (comma delimited): ")
 			scanner.Scan()
 			itemsToRemove := strings.Split(scanner.Text(), ",")
-			
+
 			for _, item := range itemsToRemove {
 				item = strings.TrimSpace(item)
 				index := indexOf(groceryList, item)
